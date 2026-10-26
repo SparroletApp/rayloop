@@ -121,6 +121,341 @@
     transition: all 0.25s ease;
 }
 
+.rayloop-services-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.rayloop-services-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.rayloop-services-trigger .services-chevron {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.rayloop-services-dropdown:hover .services-chevron,
+.rayloop-services-dropdown.services-open .services-chevron {
+    transform: rotate(180deg);
+}
+
+.rayloop-services-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    width: 650px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 86, 86, 0.15);
+    border-radius: 16px;
+    box-shadow:
+        0 20px 50px rgba(30, 30, 30, 0.10),
+        0 5px 20px rgba(255, 86, 86, 0.06);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translate(-50%, 12px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1100;
+}
+
+
+.rayloop-services-menu::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+
+.rayloop-services-dropdown:hover .rayloop-services-menu,
+.rayloop-services-dropdown.services-open .rayloop-services-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.rayloop-services-menu-header {
+    padding-bottom: 18px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #f2e8e8;
+}
+
+.rayloop-services-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #ff5656;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.rayloop-services-menu-header h3 {
+    margin: 0 0 7px;
+    color: #292929;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.rayloop-services-menu-header p {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.rayloop-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.rayloop-service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 13px 11px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: #ffffff;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.rayloop-service-item:hover {
+    background: #fff5f5;
+    border-color: rgba(255, 86, 86, 0.18);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 86, 86, 0.08);
+}
+
+.rayloop-service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    color: #ff5656;
+    background: #fff0f0;
+    border-radius: 10px;
+
+    font-size: 19px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.rayloop-service-item:hover .rayloop-service-icon {
+    color: #ffffff;
+    background: #ff5656;
+}
+
+.rayloop-service-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.rayloop-service-title {
+    color: #292929;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    transition: color 0.25s ease;
+}
+
+.rayloop-service-item:hover .rayloop-service-title {
+    color: #ff5656;
+}
+
+.rayloop-service-description {
+    color: #777777;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.rayloop-service-arrow {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #aaaaaa;
+    font-size: 13px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.rayloop-service-item:hover .rayloop-service-arrow {
+    color: #ff5656;
+    transform: translate(2px, -2px);
+}
+
+.rayloop-all-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 18px;
+    padding: 13px;
+
+    color: #ffffff;
+    background: #ff5656;
+    border: 1px solid #ff5656;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.rayloop-all-services:hover {
+    color: #ff5656;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(255, 86, 86, 0.12);
+}
+
+.rayloop-all-services i {
+    transition: transform 0.25s ease;
+}
+
+.rayloop-all-services:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 800px) {
+    .rayloop-services-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        height: auto;
+    }
+
+    .rayloop-services-trigger {
+        justify-content: space-between;
+        width: 100%;
+        padding: 14px 12px;
+        border-bottom: 1px solid #f4eee9;
+        text-align: left;
+    }
+
+    .rayloop-services-menu {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        margin: 0;
+        padding: 0 12px;
+        overflow: hidden;
+
+        border: none;
+        border-radius: 10px;
+        box-shadow: none;
+        background: #ffffff;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+        transform: none;
+
+        transition:
+            max-height 0.4s ease,
+            padding 0.3s ease,
+            margin 0.3s ease;
+    }
+
+    .rayloop-services-menu::before {
+        display: none;
+    }
+
+    .rayloop-services-dropdown:hover .rayloop-services-menu {
+        transform: none;
+    }
+
+    .rayloop-services-dropdown.services-open .rayloop-services-menu {
+        max-height: 850px;
+        margin: 10px 0;
+        padding: 18px 12px;
+
+        border: 1px solid rgba(255, 86, 86, 0.15);
+        box-shadow: 0 8px 20px rgba(30, 30, 30, 0.05);
+
+        pointer-events: auto;
+    }
+
+    .rayloop-services-menu-header {
+        padding-bottom: 14px;
+        margin-bottom: 12px;
+    }
+
+    .rayloop-services-menu-header h3 {
+        font-size: 21px;
+    }
+
+    .rayloop-services-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .rayloop-service-item {
+        padding: 12px 8px;
+    }
+
+    .rayloop-service-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .rayloop-service-title {
+        font-size: 12px;
+    }
+
+    .rayloop-service-description {
+        font-size: 11px;
+    }
+
+    .rayloop-all-services {
+        margin-top: 12px;
+    }
+}
+
 @media (max-width: 1050px) {
     .rayloop-header {
         padding: 12px 20px;
