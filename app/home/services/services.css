@@ -504,7 +504,7 @@
 
 @media (max-width: 900px) {
   .rl-services {
-    padding: 85px 22px 32px;
+    padding: 20px 22px 32px;
   }
 
   .rl-services-top {
@@ -550,12 +550,12 @@
 
 @media (max-width: 640px) {
   .rl-services {
-    padding: 65px 17px 25px;
+    padding: 20px 17px 25px;
   }
 
   .rl-services-heading h2 {
-    font-size: clamp(43px, 12vw, 62px);
-    letter-spacing: -3px;
+    font-size: 40px;
+    letter-spacing: 1px;
   }
 
   .rl-services-eyebrow {
@@ -644,16 +644,5 @@
     font-size: 8px;
     letter-spacing: 1.2px;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-
-  .rl-services *,
-  .rl-services *::before,
-  .rl-services *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

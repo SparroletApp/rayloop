@@ -1,11 +1,10 @@
-
 .rayloop-about {
     --about-orange: #eb4c4c;
     --about-orange-dark: #eb4c4c;
     --about-black: #171717;
     --about-gray: #6d6d6d;
     --about-light: #fff7f1;
-padding: 40PX 0PX;
+    padding: 40PX 0PX;
     width: 100%;
     overflow: hidden;
     background: #ffffff;
@@ -142,11 +141,9 @@ padding: 40PX 0PX;
 .rayloop-about-image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        transparent 40%,
-        rgba(0, 0, 0, 0.7) 100%
-    );
+    background: linear-gradient(180deg,
+            transparent 40%,
+            rgba(0, 0, 0, 0.7) 100%);
 }
 
 .rayloop-about-image-caption {
@@ -201,10 +198,8 @@ padding: 40PX 0PX;
     left: -20px;
     width: 85px;
     height: 85px;
-    background-image: radial-gradient(
-        var(--about-orange) 1.5px,
-        transparent 1.5px
-    );
+    background-image: radial-gradient(var(--about-orange) 1.5px,
+            transparent 1.5px);
     background-size: 12px 12px;
     opacity: 0.5;
 }
@@ -245,7 +240,7 @@ padding: 40PX 0PX;
     color: var(--about-orange);
 }
 
-.rayloop-about-culture-heading > p {
+.rayloop-about-culture-heading>p {
     max-width: 470px;
     margin: 0 0 4px;
     color: var(--about-gray);
@@ -255,7 +250,7 @@ padding: 40PX 0PX;
 
 
 .rayloop-about-culture-grid {
-display: flex;
+    display: flex;
     border-top: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
 }
@@ -272,7 +267,7 @@ display: flex;
     transition: background 0.3s ease;
 }
 
-.rayloop-about-culture-card + .rayloop-about-culture-card {
+.rayloop-about-culture-card+.rayloop-about-culture-card {
     border-left: 1px solid #eaeaea;
 }
 
@@ -321,7 +316,7 @@ display: flex;
     line-height: 1.4;
 }
 
-.rayloop-about-culture-card > p {
+.rayloop-about-culture-card>p {
     flex-grow: 1;
     margin: 0 0 25px;
     color: var(--about-gray);
@@ -336,8 +331,7 @@ display: flex;
     transition: width 0.3s ease;
 }
 
-.rayloop-about-culture-card:hover
-    .rayloop-about-culture-card-line {
+.rayloop-about-culture-card:hover .rayloop-about-culture-card-line {
     width: 65px;
 }
 
@@ -410,7 +404,7 @@ display: flex;
 
 @media (max-width: 767px) {
     .rayloop-about {
-        padding: 60px 20px;
+        padding: 20px 20px;
     }
 
     .rayloop-about-top {
@@ -424,7 +418,7 @@ display: flex;
     }
 
     .rayloop-about-label {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 10px;
         letter-spacing: 2px;
     }
@@ -436,9 +430,15 @@ display: flex;
     }
 
     .rayloop-about-intro {
-        font-size: 15px;
+        font-size: 13px;
+        margin-bottom: 5px;
         line-height: 1.85;
     }
+
+    .rayloop-about-culture-label {
+        margin-bottom: 5px;
+    }
+
 
     .rayloop-about-description {
         font-size: 13px;
@@ -447,7 +447,8 @@ display: flex;
 
     .rayloop-about-button {
         gap: 18px;
-        padding: 14px 18px;
+        min-height: 25px;
+        padding: 5px 18px;
     }
 
     .rayloop-about-visual {
@@ -457,7 +458,7 @@ display: flex;
     }
 
     .rayloop-about-image-wrap {
-        height: 320px;
+        height: 280px;
     }
 
     .rayloop-about-orange-shape {
@@ -487,21 +488,31 @@ display: flex;
     }
 
     .rayloop-about-bottom {
-        padding-top: 35px;
+        padding-top: 0px;
+    }
+
+
+    .rayloop-about-bottom {
+        border-top: none;
     }
 
     .rayloop-about-culture-heading {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 10px;
         margin-bottom: 28px;
     }
 
+    .rayloop-about-culture-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
     .rayloop-about-culture-heading h3 {
-        font-size: clamp(29px, 7vw, 36px);
+        font-size: 30px;
         letter-spacing: -1px;
     }
 
-    .rayloop-about-culture-heading > p {
+    .rayloop-about-culture-heading>p {
         font-size: 13px;
         line-height: 1.9;
     }
@@ -515,7 +526,7 @@ display: flex;
         padding: 25px 20px;
     }
 
-    .rayloop-about-culture-card + .rayloop-about-culture-card {
+    .rayloop-about-culture-card+.rayloop-about-culture-card {
         border-top: 1px solid #eaeaea;
         border-left: none;
     }
@@ -534,11 +545,16 @@ display: flex;
         font-size: 19px;
     }
 
-    .rayloop-about-culture-card > p {
+    .rayloop-about-culture-card>p {
         margin-bottom: 20px;
         font-size: 13px;
         line-height: 1.9;
     }
+
+    .rayloop-about-content h2 {
+        margin-bottom: 10px;
+    }
+
     .rayloop-about-culture-footer {
         align-items: flex-start;
         gap: 13px;
@@ -561,7 +577,7 @@ display: flex;
 
 @media (max-width: 380px) {
     .rayloop-about {
-        padding: 50px 16px;
+        padding: 20px 16px;
     }
 
     .rayloop-about-content h2 {
@@ -583,6 +599,7 @@ display: flex;
 
 
 @media (prefers-reduced-motion: reduce) {
+
     .rayloop-about *,
     .rayloop-about *::before,
     .rayloop-about *::after {

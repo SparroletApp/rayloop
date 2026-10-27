@@ -1,5 +1,5 @@
 .product-section {
-    padding: 100px 6%;
+    padding: 30px 6%;
     background: linear-gradient(
         135deg,
         #ffffff 0%,
@@ -278,7 +278,6 @@
     color: #ffffff;
 }
 
-/* Product image */
 .product-image-link {
     display: block;
     text-decoration: none;
@@ -373,9 +372,6 @@
 }
 
 @media (max-width: 991px) {
-    .product-section {
-        padding: 75px 5%;
-    }
 
     .product-grid {
         gap: 22px;

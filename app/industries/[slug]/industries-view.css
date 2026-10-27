@@ -1,0 +1,1604 @@
+.industry-view {
+    --iv-primary: #ff5656;
+    --iv-primary-dark: #c52929;
+    --iv-primary-light: #ffeeee;
+    --iv-text: #17152c;
+    --iv-muted: #737187;
+    --iv-border: #e9e6f2;
+    --iv-background: #fff2f2;
+
+    overflow: hidden;
+    background: #ffffff;
+    color: var(--iv-text);
+    font-family: inherit;
+}
+
+.industry-view * {
+    box-sizing: border-box;
+}
+
+.industry-view a {
+    text-decoration: none;
+}
+
+.industry-view img {
+    display: block;
+    max-width: 100%;
+}
+
+.iv-section-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: var(--iv-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.iv-section-tag span {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background: var(--iv-primary);
+}
+
+.iv-section-title {
+    margin: 0;
+    color: var(--iv-text);
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.8px;
+}
+
+.iv-section-title span {
+    color: var(--iv-primary);
+}
+
+
+.iv-hero {
+    position: relative;
+    padding: 65px 0 105px;
+    background:
+        radial-gradient(circle at 78% 35%,
+            rgba(255, 86, 86, 0.12),
+            transparent 31%),
+        linear-gradient(135deg,
+            #ffffff 0%,
+            #fff9f9 55%,
+            #ffeded 100%);
+}
+
+.iv-hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.iv-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    color: #77748c;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.iv-back-link i {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    place-items: center;
+    border: 1px solid #f7dcdc;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.iv-back-link:hover {
+    color: var(--iv-primary);
+}
+
+.iv-back-link:hover i {
+    color: #ffffff;
+    border-color: var(--iv-primary);
+    background: var(--iv-primary);
+    transform: translateX(-3px);
+}
+
+.iv-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+    color: var(--iv-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.iv-eyebrow span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff5656;
+    box-shadow: 0 0 0 5px rgba(255, 86, 86, 0.1);
+}
+
+.iv-number {
+    margin-bottom: 12px;
+    color: #aaa6c0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.iv-hero h1 {
+    margin: 0;
+    color: var(--iv-text);
+    font-size: 55px;
+    font-weight: 850;
+    line-height: 1.06;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.iv-hero h1 span {
+    color: var(--iv-primary);
+}
+
+.iv-hero-subtitle {
+    margin: 22px 0 13px;
+    color: #343149;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.iv-hero-description {
+    max-width: 490px;
+    margin: 0;
+    color: var(--iv-muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.iv-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.iv-primary-button,
+.iv-secondary-button {
+    display: inline-flex;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 0 21px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.iv-primary-button {
+    color: #ffffff;
+    background: linear-gradient(110deg,
+            #ff5656,
+            #fabfbf);
+    box-shadow: 0 9px 23px rgba(66, 29, 219, 0.2);
+}
+
+.iv-primary-button:hover {
+    color: #ffffff;
+    box-shadow: 0 13px 28px rgba(66, 29, 219, 0.3);
+    transform: translateY(-3px);
+}
+
+.iv-primary-button i,
+.iv-secondary-button i {
+    font-size: 15px;
+}
+
+.iv-secondary-button {
+    color: var(--iv-text);
+    border: 1px solid #e7e2f5;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.iv-secondary-button:hover {
+    color: var(--iv-primary);
+    border-color: var(--iv-primary);
+    transform: translateY(-3px);
+}
+
+.iv-trust-line {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 34px;
+    color: #77748c;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.iv-trust-icon {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    flex-shrink: 0;
+    place-items: center;
+    color: var(--iv-primary);
+    border-radius: 50%;
+    background: #ffe7e7;
+}
+
+.iv-hero-visual {
+    position: relative;
+    padding: 15px 20px 45px 15px;
+}
+
+.iv-image-frame {
+    position: relative;
+    height: 470px;
+    overflow: hidden;
+    border: 7px solid rgba(255, 255, 255, 0.95);
+    border-radius: 13px 75px 13px 13px;
+    background: #e7e2f7;
+    box-shadow: 0 25px 70px rgba(38, 22, 91, 0.13);
+}
+
+.iv-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.iv-image-frame:hover img {
+    transform: scale(1.055);
+}
+
+.iv-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            transparent 38%,
+            rgba(18, 13, 49, 0.12) 55%,
+            rgba(18, 13, 49, 0.88) 100%);
+}
+
+.iv-image-label {
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #ffffff;
+}
+
+.iv-image-label-icon {
+    display: grid;
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+    place-items: center;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+}
+
+.iv-image-label-icon i {
+    font-size: 21px;
+}
+
+.iv-image-label div {
+    min-width: 0;
+    flex: 1;
+}
+
+.iv-image-label div span {
+    display: block;
+    margin-bottom: 5px;
+    color: #eebdae;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.iv-image-label h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.iv-label-arrow {
+    font-size: 21px;
+}
+
+.iv-floating-card {
+    position: absolute;
+    z-index: 3;
+    top: 64px;
+    left: -13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 19px;
+    border: 1px solid rgba(235, 230, 255, 0.9);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 35px rgba(33, 20, 86, 0.12);
+    animation: iv-float 4s ease-in-out infinite;
+}
+
+.iv-floating-icon {
+    display: grid;
+    width: 39px;
+    height: 39px;
+    place-items: center;
+    color: var(--iv-primary);
+    border-radius: 9px;
+    background: #f8eded;
+}
+
+.iv-floating-icon i {
+    font-size: 20px;
+}
+
+.iv-floating-card strong,
+.iv-floating-card div:last-child span {
+    display: block;
+}
+
+.iv-floating-card strong {
+    margin-bottom: 5px;
+    color: var(--iv-text);
+    font-size: 11px;
+}
+
+.iv-floating-card div:last-child span {
+    color: var(--iv-muted);
+    font-size: 10px;
+}
+
+.iv-visual-index {
+    position: absolute;
+    right: 19px;
+    bottom: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff5656;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.iv-visual-index span:first-child {
+    color: var(--iv-primary);
+    font-size: 15px;
+}
+
+.iv-index-line {
+    width: 37px;
+    height: 1px;
+    background: #ff5656;
+}
+
+.iv-visual-dot {
+    position: absolute;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    background: #ff5656;
+}
+
+.iv-dot-one {
+    top: 28px;
+    right: 3px;
+}
+
+.iv-dot-two {
+    right: 2px;
+    bottom: 85px;
+    width: 11px;
+    height: 11px;
+    background: var(--iv-primary);
+}
+
+.iv-hero-glow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36%;
+    height: 100%;
+   background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 86, 86, 0.04)
+);
+    pointer-events: none;
+}
+
+.iv-hero-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #ff5656;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transform: translateX(-50%);
+}
+
+.iv-hero-bottom i {
+    color: var(--iv-primary);
+    animation: iv-bounce 1.8s infinite;
+}
+
+.iv-stats-section {
+    position: relative;
+    z-index: 3;
+    padding: 0 0 30px;
+    background: #ffffff;
+}
+
+.iv-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 29px 18px;
+    border: 1px solid #efecf7;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 15px 45px rgba(37, 24, 82, 0.045);
+}
+
+.iv-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 6px 15px;
+}
+
+.iv-stat {
+    border-left: 1px solid var(--iv-border);
+}
+
+.iv-stat-number {
+    color: var(--iv-primary);
+    font-size: clamp(23px, 3vw, 34px);
+    font-weight: 850;
+    letter-spacing: -1.3px;
+}
+
+.iv-stat-content span {
+    display: block;
+    margin-bottom: 5px;
+    color: #f8c0c0;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.iv-stat-content p {
+    margin: 0;
+    color: #615d76;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+
+.iv-overview-section {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.iv-overview-highlight {
+    max-width: 370px;
+    margin: 25px 0 0;
+    color: #77748c;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.iv-overview-content {
+    position: relative;
+    padding: 33px 35px;
+    border: 1px solid #ffeaea;
+    border-radius: 13px;
+    background:
+        radial-gradient(circle at 100% 0%,
+            rgba(255, 86, 86, 0.07),
+            transparent 35%),
+        #fffafa;
+}
+
+.iv-overview-symbol {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 23px;
+    place-items: center;
+    color: var(--iv-primary);
+    border-radius: 12px;
+    background: #fbeaea;
+}
+
+.iv-overview-symbol i {
+    font-size: 23px;
+}
+
+.iv-overview-content p {
+    margin: 0;
+    color: #69657e;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.iv-overview-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 23px;
+    margin-top: 27px;
+    padding-top: 21px;
+    border-top: 1px solid #e9e4f5;
+}
+
+.iv-overview-bottom span:first-child {
+    width: 100%;
+    color: #c0a4a4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.iv-overview-botto span:not(:first-child) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #56516d;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.iv-overview-bottom i {
+    color: var(--iv-primary);
+    font-size: 14px;
+}
+
+.iv-challenges-section {
+    padding: 40px 0;
+    background: var(--iv-background);
+}
+
+.iv-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.iv-section-heading p {
+    max-width: 355px;
+    margin: 0 0 5px;
+    color: var(--iv-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.iv-challenge-card {
+    position: relative;
+    height: 100%;
+    min-height: 255px;
+    padding: 25px 25px 30px;
+    overflow: hidden;
+    border: 1px solid #ffddd7;
+    border-radius: 11px;
+    background: #ffffff;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.iv-challenge-card:hover {
+    border-color: #f8d7d7;
+    box-shadow: 0 18px 40px rgba(113, 54, 28, 0.08);
+    transform: translateY(-7px);
+}
+
+.iv-challenge-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.iv-challenge-top span {
+    color: #b6b0c9;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.iv-challenge-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    color: var(--iv-primary);
+    border: 1px solid #fff3f1;
+    border-radius: 12px;
+    background: #fff2f2;
+    transition: all 0.3s ease;
+}
+
+.iv-challenge-icon i {
+    font-size: 22px;
+}
+
+.iv-challenge-card:hover .iv-challenge-icon {
+    color: #ffffff;
+    border-color: var(--iv-primary);
+    background: var(--iv-primary);
+    transform: rotate(-5deg);
+}
+
+.iv-challenge-card h3 {
+    margin: 0 0 12px;
+    color: var(--iv-text);
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.iv-challenge-card p {
+    margin: 0;
+    color: var(--iv-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.iv-challenge-line {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    left: 25px;
+    height: 3px;
+    background: var(--iv-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.iv-challenge-card:hover .iv-challenge-line {
+    transform: scaleX(1);
+}
+
+
+.iv-solutions-section {
+    padding: 40px 0;
+    background: #ffffff;
+    scroll-margin-top: 30px;
+}
+
+.iv-solutions-heading {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.iv-solutions-heading .iv-section-tag {
+    justify-content: center;
+}
+
+.iv-solutions-heading p {
+    max-width: 500px;
+    margin: 18px auto 0;
+    color: var(--iv-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.iv-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.iv-solution-card {
+    position: relative;
+    display: flex;
+    min-height: 290px;
+    flex-direction: column;
+    padding: 23px 20px 20px;
+    overflow: hidden;
+    border: 1px solid #ebe7f5;
+    border-radius: 10px;
+    background: #ffffff;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.iv-solution-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,
+            var(--iv-primary),
+            #f9cece);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.iv-solution-card:hover {
+    border-color: #f1c0c0;
+    box-shadow: 0 20px 45px rgba(45, 24, 111, 0.09);
+    transform: translateY(-6px);
+}
+
+.iv-solution-card:hover::before {
+    transform: scaleX(1);
+}
+
+.iv-solution-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.iv-solution-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    color: var(--iv-primary);
+    border-radius: 12px;
+    background: #fff2f2;
+    transition: all 0.3s ease;
+}
+
+.iv-solution-icon i {
+    font-size: 22px;
+}
+
+.iv-solution-card:hover .iv-solution-icon {
+    color: #ffffff;
+    background: var(--iv-primary);
+}
+
+.iv-solution-card-top span {
+    color: #c2bdd3;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.iv-solution-card h3 {
+    margin: 0 0 12px;
+    color: var(--iv-text);
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.iv-solution-card p {
+    flex: 1;
+    margin: 0 0 23px;
+    color: var(--iv-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.iv-solution-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid #efecf6;
+}
+
+.iv-solution-footer span {
+    color: #9690ad;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.iv-solution-footer i {
+    color: var(--iv-primary);
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.iv-solution-card:hover .iv-solution-footer i {
+    transform: translate(3px, -3px);
+}
+
+.iv-benefits-section {
+    padding: 25px 0 50px;
+    background: #ffffff;
+}
+
+.iv-benefits-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
+    padding: 65px;
+    overflow: hidden;
+    border: 1px solid #eae5f8;
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 0% 100%,
+            rgba(175, 91, 57, 0.09),
+            transparent 38%),
+        #fff2f2;
+}
+
+.iv-benefits-left,
+.iv-benefits-list {
+    position: relative;
+    z-index: 2;
+}
+
+.iv-benefits-left h2 {
+    margin: 0;
+    color: var(--iv-text);
+    font-size: 40px;
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.iv-benefits-left h2 span {
+    color: var(--iv-primary);
+}
+
+.iv-benefits-left p {
+    max-width: 360px;
+    margin: 22px 0 25px;
+    color: var(--iv-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.iv-benefits-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--iv-primary);
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.iv-benefits-link i {
+    transition: transform 0.3s ease;
+}
+
+.iv-benefits-link:hover {
+    color: var(--iv-primary-dark);
+}
+
+.iv-benefits-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+.iv-benefits-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.iv-benefit-item {
+    display: grid;
+    grid-template-columns: 27px 32px minmax(0, 1fr) 18px;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e0f5;
+}
+
+.iv-benefit-item:first-child {
+    border-top: 1px solid #e6e0f5;
+}
+
+.iv-benefit-number {
+    color: #aaa3c0;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.iv-benefit-check {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    place-items: center;
+    color: var(--iv-primary);
+    border: 1px solid #f3d0d0;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.iv-benefit-check i {
+    font-size: 16px;
+}
+
+.iv-benefit-item p {
+    margin: 0;
+    color: #37334d;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.6;
+}
+
+.iv-benefit-arrow {
+    color: #aaa3c0;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.iv-benefit-item:hover .iv-benefit-arrow {
+    color: var(--iv-primary);
+    transform: translate(2px, -2px);
+}
+
+.iv-benefits-decoration {
+    position: absolute;
+    right: -100px;
+    bottom: -170px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(205, 76, 59, 0.1);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(190, 61, 52, 0.025),
+        0 0 0 70px rgba(165, 69, 31, 0.02);
+}
+
+.iv-cta-section {
+    padding: 0 0 85px;
+    background: #ffffff;
+}
+
+.iv-cta-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 45px;
+    padding: 58px 65px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(115deg,
+            #630909 0%,
+            #ff5656 55%,
+            #f4b5b5 100%);
+}
+
+.iv-cta-content,
+.iv-cta-side {
+    position: relative;
+    z-index: 2;
+}
+
+.iv-cta-tag {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: #d8ceff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.iv-cta-tag i {
+    color: #ffcb8d;
+    font-size: 16px;
+}
+
+.iv-cta-content h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -1.6px;
+}
+
+.iv-cta-content h2 span {
+    color: #c8baff;
+}
+
+.iv-cta-content p {
+    max-width: 440px;
+    margin: 19px 0 27px;
+    color: #e0d9ff;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.iv-cta-button {
+    display: inline-flex;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 0 22px;
+    color: var(--iv-primary);
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.iv-cta-button:hover {
+    color: var(--iv-primary);
+    background: #eee9ff;
+    transform: translateY(-3px);
+}
+
+.iv-cta-button i {
+    font-size: 16px;
+}
+
+.iv-cta-side {
+    padding: 29px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+}
+
+.iv-cta-side-icon {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 23px;
+    place-items: center;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.iv-cta-side-icon i {
+    font-size: 24px;
+}
+
+.iv-cta-side span {
+    color: #c7baff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.iv-cta-side h3 {
+    margin: 10px 0 20px;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.iv-cta-side-line {
+    width: 45px;
+    height: 3px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    background: #ffeeee;
+}
+
+.iv-cta-side p {
+    margin: 0;
+    color: #e1d9ff;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.iv-cta-decoration {
+    position: absolute;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.iv-cta-decoration-one {
+    top: -240px;
+    right: 20%;
+    width: 500px;
+    height: 500px;
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, 0.025),
+        0 0 0 90px rgba(255, 255, 255, 0.02);
+}
+
+.iv-cta-decoration-two {
+    right: -150px;
+    bottom: -240px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.025);
+}
+
+.iv-bottom-nav {
+    padding: 0 0 30px;
+    background: #ffffff;
+}
+
+.iv-bottom-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #eeeaf5;
+}
+
+.iv-bottom-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--iv-text);
+    transition: color 0.3s ease;
+}
+
+.iv-bottom-link i {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    color: var(--iv-primary);
+    border: 1px solid #fbd0d0;
+    border-radius:#fceaea;
+    transition: all 0.3s ease;
+}
+
+.iv-bottom-link:hover {
+    color: var(--iv-primary);
+}
+
+.iv-bottom-link:hover i {
+    color: #ffffff;
+    border-color: var(--iv-primary);
+    background: var(--iv-primary);
+}
+
+.iv-bottom-link span small {
+    display: block;
+    margin-bottom: 4px;
+    color: #a09ab5;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.iv-bottom-link span {
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.iv-bottom-link-right {
+    text-align: right;
+}
+
+.iv-bottom-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--iv-primary);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.iv-bottom-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--iv-primary);
+    box-shadow: 0 0 0 4px #eee9ff;
+}
+
+
+@keyframes iv-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes iv-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .iv-hero h1 {
+        font-size: 53px;
+    }
+
+    .iv-image-frame {
+        height: 420px;
+    }
+
+    .iv-solutions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .iv-benefits-panel {
+        gap: 35px;
+        padding: 45px;
+    }
+
+    .iv-cta-card {
+        gap: 30px;
+        padding: 45px;
+    }
+}
+
+@media (max-width: 991px) {
+    .iv-hero {
+        padding-top: 40px;
+    }
+
+    .iv-hero h1 {
+        font-size: 54px;
+    }
+
+    .iv-hero-visual {
+        max-width: 650px;
+        margin: 10px auto 0;
+    }
+
+    .iv-image-frame {
+        height: 440px;
+    }
+
+    .iv-floating-card {
+        left: -5px;
+    }
+
+    .iv-overview-section,
+    .iv-challenges-section,
+    .iv-solutions-section {
+        padding: 75px 0;
+    }
+
+    .iv-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .iv-section-heading p {
+        max-width: 550px;
+    }
+
+    .iv-benefits-panel {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .iv-cta-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .iv-cta-side {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    .iv-hero {
+        padding: 25px 0 70px;
+    }
+
+    .iv-back-link {
+        margin-bottom: 30px;
+    }
+
+    .iv-hero h1 {
+        font-size: clamp(39px, 9vw, 50px);
+        letter-spacing: -2px;
+    }
+
+    .iv-hero-subtitle {
+        font-size: 15px;
+    }
+
+    .iv-hero-description {
+        font-size: 13px;
+    }
+
+    .iv-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .iv-primary-button,
+    .iv-secondary-button {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .iv-trust-line {
+        align-items: flex-start;
+    }
+
+    .iv-hero-visual {
+        padding: 17px 8px 42px;
+    }
+
+    .iv-image-frame {
+        height: 350px;
+        border-radius: 12px 48px 12px 12px;
+    }
+
+    .iv-floating-card {
+        top: 43px;
+        left: -1px;
+        gap: 9px;
+        padding: 11px;
+    }
+
+    .iv-floating-icon {
+        width: 33px;
+        height: 33px;
+    }
+
+    .iv-floating-card strong {
+        font-size: 10px;
+    }
+
+    .iv-floating-card div:last-child span {
+        font-size: 9px;
+    }
+
+    .iv-image-label {
+        right: 13px;
+        bottom: 16px;
+        left: 13px;
+        gap: 9px;
+    }
+
+    .iv-image-label-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .iv-image-label h3 {
+        font-size: 13px;
+    }
+
+    .iv-image-label div span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .iv-visual-index {
+        right: 8px;
+        font-size: 8px;
+    }
+
+    .iv-stats-section {
+        padding-bottom: 15px;
+    }
+
+    .iv-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 12px 18px;
+    }
+
+    .iv-stat {
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 17px 10px;
+    }
+
+    .iv-stat {
+        border-top: 1px solid var(--iv-border);
+        border-left: 0;
+    }
+
+    .iv-stat-number {
+        width: 95px;
+        flex-shrink: 0;
+        font-size: 28px;
+    }
+
+    .iv-stat-content p {
+        font-size: 11px;
+    }
+
+    .iv-overview-section,
+    .iv-challenges-section,
+    .iv-solutions-section {
+        padding: 65px 0;
+    }
+
+    .iv-section-title {
+        font-size: 34px;
+        letter-spacing: -1.2px;
+    }
+
+    .iv-overview-highlight {
+        font-size: 13px;
+    }
+
+    .iv-overview-content {
+        padding: 25px 22px;
+    }
+
+    .iv-overview-content p {
+        font-size: 13px;
+    }
+
+    .iv-overview-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .iv-challenge-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .iv-challenge-top {
+        margin-bottom: 22px;
+    }
+
+    .iv-challenge-card h3 {
+        font-size: 17px;
+    }
+
+    .iv-solutions-heading {
+        margin-bottom: 35px;
+    }
+
+    .iv-solutions-heading p {
+        font-size: 12px;
+    }
+
+    .iv-solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .iv-solution-card {
+        min-height: 250px;
+        padding: 23px;
+    }
+
+    .iv-benefits-section {
+        padding: 0 0 65px;
+    }
+
+    .iv-benefits-panel {
+        gap: 35px;
+        padding: 30px 22px;
+        border-radius: 12px;
+    }
+
+    .iv-benefits-left h2 {
+        font-size: 33px;
+    }
+
+    .iv-benefits-left p {
+        font-size: 12px;
+    }
+
+    .iv-benefit-item {
+        grid-template-columns: 22px 29px minmax(0, 1fr) 14px;
+        gap: 8px;
+        padding: 17px 0;
+    }
+
+    .iv-benefit-check {
+        width: 28px;
+        height: 28px;
+    }
+
+    .iv-benefit-item p {
+        font-size: 11px;
+    }
+
+    .iv-cta-section {
+        padding-bottom: 60px;
+    }
+
+    .iv-cta-card {
+        gap: 30px;
+        padding: 35px 23px;
+        border-radius: 12px;
+    }
+
+    .iv-cta-content h2 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .iv-cta-content p {
+        font-size: 12px;
+    }
+
+    .iv-cta-side {
+        padding: 23px;
+    }
+
+    .iv-cta-side h3 {
+        font-size: 19px;
+    }
+
+    .iv-bottom-nav .container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .iv-bottom-center {
+        display: none;
+    }
+
+    .iv-bottom-link span {
+        font-size: 10px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .industry-view *,
+    .industry-view *::before,
+    .industry-view *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

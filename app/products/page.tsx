@@ -4,8 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import "./product.css";
 import "../footer/footer.css";
+import { useRouter } from "next/navigation";
 
 function Products() {
+
+    const router = useRouter();
+
     const products = [
         {
             number: "01",
@@ -23,7 +27,7 @@ function Products() {
                 "Recurring Service Reminders",
             ],
             tags: ["Web Application", "Mobile Application", "Cloud Based"],
-            link: "/products/fsm",
+           link: "/products/rayloop-fsm",
         },
         {
             number: "02",
@@ -74,6 +78,16 @@ function Products() {
                         <div
                             className="col-lg-4 col-md-4 col-12 product-card"
                             key={product.number}
+                            onClick={() => router.push(product.link)}
+                            role="link"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    router.push(product.link);
+                                }
+                            }}
+                            style={{ cursor: "pointer" }}
                         >
                             <Link
                                 href={product.link}

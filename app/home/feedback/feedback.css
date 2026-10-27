@@ -9,11 +9,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.feedback *,
-.feedback *::before,
-.feedback *::after {
-    box-sizing: border-box;
-}
 
 .feedback-container {
     width: 100%;
@@ -454,7 +449,7 @@
 
 @media (max-width: 600px) {
     .feedback {
-        padding: 70px 0 40px;
+        padding: 20px 0 40px;
     }
 
     .feedback-top {

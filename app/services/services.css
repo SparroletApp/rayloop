@@ -157,7 +157,6 @@
     transform: translateY(-2px);
 }
 
-/* Heading */
 
 .rayloop-approach-heading {
     max-width: 650px;
@@ -364,8 +363,6 @@
     border-radius: 18px;
     position: relative;
     overflow: hidden;
-
-    /* Red gradient instead of purple */
     background: linear-gradient(
         110deg,
         #ff5656 0%,
@@ -378,14 +375,13 @@
         inset 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
-/* Statistics layout */
+
 .service-stats {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
 }
 
-/* Individual statistic */
 .service-stat-item {
     display: flex;
     align-items: center;
@@ -396,7 +392,7 @@
     color: #ffffff;
 }
 
-/* Vertical divider */
+
 .service-stat-item:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -407,14 +403,14 @@
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* Icons */
+
 .service-stat-item > i {
     font-size: 42px;
     flex-shrink: 0;
     color: #ffffff;
 }
 
-/* Numbers */
+
 .service-stat-content h3 {
     font-size: 32px;
     font-weight: 700;
@@ -422,7 +418,7 @@
     color: #ffffff;
 }
 
-/* Labels */
+
 .service-stat-content p {
     font-size: 14px;
     margin: 0;
@@ -430,7 +426,6 @@
     white-space: nowrap;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
     .service-stats {
         grid-template-columns: repeat(3, 1fr);
@@ -450,7 +445,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 576px) {
     .service-clear {
         padding: 25px 15px;
@@ -649,7 +644,6 @@
     box-shadow: 0 10px 25px rgba(255, 86, 86, 0.25);
 }
 
-/* Floating Badge */
 
 .rayloop-approach-image-badge {
     position: absolute;
@@ -674,7 +668,7 @@
     font-size: 17px;
 }
 
-/* Bottom Highlights */
+
 
 .rayloop-approach-highlights {
     display: grid;

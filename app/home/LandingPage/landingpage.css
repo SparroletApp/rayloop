@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 690px;
-    padding: 76px 24px 48px;
+    padding: 50px 24px 48px;
     overflow: hidden;
     background:
         radial-gradient(
@@ -408,19 +408,19 @@
 
 @media (max-width: 480px) {
     .rayloop-hero {
-        min-height: 680px;
-        padding: 55px 18px 32px;
+        min-height: 600px;
+        padding: 30px 18px 32px;
     }
 
     .rayloop-eyebrow {
         max-width: 100%;
-        padding: 8px 11px;
+        padding: 6px 11px;
         font-size: 9px;
         letter-spacing: 1px;
     }
 
     .rayloop-hero-content h1 {
-        font-size: clamp(34px, 9vw, 43px);
+        font-size:35px;
         line-height: 1.17;
         letter-spacing: -1.2px;
     }
@@ -436,25 +436,25 @@
     }
 
     .rayloop-hero-actions {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
         margin-top: 27px;
     }
 
     .rayloop-primary-btn,
     .rayloop-secondary-btn {
-        width: 190px;
-        min-height: 45px;
+        /* width: 190px; */
+        min-height: 35px;
         font-size: 12px;
     }
 
     .rayloop-hero-features {
-        display: grid;
-        grid-template-columns: 1fr;
+        /* display: grid;
+        grid-template-columns: 1fr; */
         justify-content: center;
         gap: 12px;
         width: fit-content;
-        margin: 29px auto 0;
+        /* margin: 29px auto 0; */
     }
 
     .rayloop-feature {
